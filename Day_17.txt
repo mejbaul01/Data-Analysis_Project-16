@@ -1,0 +1,64 @@
+#===============Database Creation=======
+
+CREATE DATABASE MYDB ;
+USE MYDB;
+
+
+#===============Table  Creation=======
+
+CREATE TABLE Students(
+
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(50),
+    Department VARCHAR(50),
+    Age INT,
+    City VARCHAR(50)
+
+
+);
+
+
+
+
+
+
+
+ALTER TABLE Students
+ADD Email VARCHAR(80) FIRST;
+
+
+ALTER TABLE Students
+MODIFY COLUMN Email VARCHAR(80) AFTER StudentName;
+
+
+#===============Data Insertion into Table==============
+
+
+INSERT INTO Students( StudentID, StudentName,Email,Department,Age,City)
+values
+
+(1002, 'Karim','kasrim@gmail.com', 'EEE', 23, 'Khulna'),
+(1003, 'Sakib', 'Sakib@gmail.com','BBA', 21, 'Rajshahi'),
+(1004, 'Nusrat','Nusrat@gmail.com', 'CSE', 22, 'Chattogram'),
+(1005, 'Mim', 'Mim@gmail.com','EEE', 24, 'Sylhet');
+
+
+
+#===============Table Data Upadate ==============
+
+UPDATE Students
+SET Department='CSE'
+
+WHERE StudentID = 1001;
+
+
+
+
+
+
+
+SELECT * From Students;
+
+
+WHERE DEAPARTMENT = " CSC "and/or  City = Dhaka;
+
